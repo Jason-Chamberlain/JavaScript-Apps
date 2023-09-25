@@ -1,0 +1,40 @@
+html {
+    font-family: "Avenir Next", Helvetica, sans-serif; /* Sets default font family */
+    text-align: center;                 /* Centers text within HTML element */
+}
+
+body {
+    max-width: 500px;                   /* Sets maximum width of body element */
+    margin: 0 auto;                     /* Centers body element horizontally  */
+}
+
+input {
+    padding-top: 30px;                  /* Adds padding to top of input element */
+    width: 500px;                       /* Sets width of input element */
+    height: 60px;                       /* Sets height of input element */
+    font-size: 40px;                    /* Sets font size of input element text */
+    border: 0;                          /* Removes border around input element */
+}
+
+input:focus {
+    outline: none;                      /* Removes focus outline when input element selected */
+}
+
+li {
+    text-align: left;                   /* Aligns list item text to left */
+    font-size: 40px;                    /* Sets font size of list item text */
+    list-style: none;                   /* Removes default bullet point style from list item */
+    margin: 0;                          /* Removes any margin around list item */
+}
+
+footer {
+    background-color: lightgray;      /* Sets background color of footer element */
+    border: 1px solid gray;           /* Adds border around footer element */
+    position: fixed;                    /* Fixes position of footer element so it remains in fixed location */
+    bottom: 0;                          /* Sets bottom position of footer element */
+    width: 500px;                       /* Sets width of footer element */
+}
+
+.remove {
+    padding-bottom: 5px;                /* Adds padding to bottom of class "remove" elements */
+}

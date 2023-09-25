@@ -1,0 +1,64 @@
+body {
+    background-color: #e7e7e7;              /* Sets the background color of the body */
+}
+
+h1,
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Sets the font family for h1 and h3 elements */
+    color: rgb(10, 80, 105);                /* Sets the text color for h1 and h3 elements */
+}
+
+div {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Sets the font family for div elements */
+}
+
+#menuBG {
+    width: 600px;                           /* Sets the width of the element with the ID "menuBG" */
+    height: 470px;                          /* Sets the height of the element with the ID "menuBG" */
+    margin: 10px auto;                      /* Sets the top and bottom margins to 10px and horizontally centers the element */
+}
+
+#frmMenu {
+    width: 600px;                           /* Sets the width of the element with the ID "frmMenu" */
+    height: 200px;                          /* Sets the height of the element with the ID "frmMenu" */
+}
+
+#totalPrice {
+    width: 200px;                           /* Sets the width of the element with the ID "totalPrice" */
+    height: 200px;                          /* Sets the height of the element with the ID "totalPrice" */
+    margin: 0 auto;                         /* Horizontally centers the element */
+    text-align: right;                      /* Aligns the text content of the element to the right */
+    float: right;                           /* Floats the element to the right */
+}
+
+.left {
+    width: 50%;                             /* Sets the width of elements with the class "left" to 50% */
+    float: left;                            /* Floats elements with the class "left" to the left */
+}
+
+.right {
+    width: 50%;                             /* Sets the width of elements with the class "right" to 50% */
+    float: right;                           /* Floats elements with the class "right" to the right */
+}
+
+#showText {
+    width: 400px;                           /* Sets the width of the element with the ID "showText" */
+    height: auto;                           /* Allows the height of the element with the ID "showText" to adjust automatically based on content */
+    margin: 0px auto;                       /* Horizontally centers the element */
+    font-family: "Lucida Console", "Courier New", monospace; /* Sets the font family for the element */
+    font-size: 12px;                        /* Sets the font size for the element */
+    float: left;                            /* Floats the element to the left */
+}
+
+#cart {
+    top: 0;                                 /* Sets the top position of the element with the ID "cart" to 0 */
+    margin: 0px auto;                       /* Horizontally centers the element */
+    width: 400px;                           /* Sets the width of the element with the ID "cart" */
+    height: auto;                           /* Allows the height of the element with the ID "cart" to adjust automatically based on content */
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;             /* Sets the margins for the element with the ID "btnOrder" */
+    width: 100px;                           /* Sets the width of the element with the ID "btnOrder" */
+    height: 40px;                           /* Sets the height of the element with the ID "btnOrder" */
+}

@@ -1,0 +1,36 @@
+/* Styles for container that holds table and canvas */
+.center-container {
+    width: 608px;                           /* Sets width of container */
+    margin: 0 auto;                         /* Centers container */
+    margin-top: 50px;                       /* 50px down from top */
+}
+
+/* Styles for heading element */
+h1 {
+    text-align: center;                     /* Centers text within heading */
+}
+
+/* Styles for table element */
+table {
+    border-collapse: collapse;              /* Collapses table border into single border */
+    border-style: hidden;                   /* Hides border */
+}
+
+/* Styles for table data cells */
+td {
+    cursor: pointer;                        /* Changes cursor to pointer on hover */
+    border: 4px solid rgba(252, 169, 3, .8);    /* Sets table border style */
+    padding: 0px;                           /* Removes default padding */
+    width: 200px;                           /* Sets width of table data cells */
+    height: 200px;                          /* Sets height of table data cells */
+    filter: contrast(3);                    /* Applies contrast effect to table data cells */
+    background-repeat: no-repeat;           /* Prevents background image from repeating */
+    background-position: center;            /* Centers background image within cells */
+}
+
+/* Styles for canvas element */
+canvas {
+    position: absolute;                     /* Positions canvas top left of container */
+    z-index: 10;                            /* Places canvas on higher layer (above table) */
+    pointer-events: none;                   /* Unable to interact with canvas */
+}

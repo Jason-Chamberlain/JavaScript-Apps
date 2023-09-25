@@ -1,0 +1,98 @@
+/* Sets the styling rules for calculator.html */
+
+/* Base styles for the HTML document */
+html {
+    font-size: 70%;                          /* Sets the base font size of the HTML document */
+    box-sizing: border-box;                  /* Ensures that the box model includes borders and padding when calculating element sizes */
+}
+
+/* Styles for all elements */
+*,
+*::before,
+*::after {
+    margin: 0;                              /* Resets margin of all elements to 0 */
+    padding: 0;                             /* Resets padding of all elements to 0 */
+    box-sizing: inherit;                    /* Inherits the box-sizing property from the parent element */
+}
+
+/* Styles for the calculator container */
+.calculator {
+    border: 1.2px solid darkslategray;    /* Adds a border */
+    border-radius: 7px;                     /* Rounds the corners */
+    position: absolute;                     /* Positions absolutely */
+    top: 50%;                               /* Positions at the vertical center */
+    left: 50%;                              /* Positions at the horizontal center */
+    transform: translate(-50%, -50%);       /* Translates to the center */
+    width: 500px;                           /* Sets the width */
+}
+
+/* Styles for the calculator display screen */
+.calculator-screen {
+    width: 100%;                            /* Sets the width */
+    font-size: 5rem;                        /* Sets the font size */
+    height: 80px;                           /* Sets the height */
+    border: none;                           /* Removes the border */
+    background-color: black;              /* Sets the background color */
+    color: white;                         /* Sets the text color */
+    text-align: right;                      /* Aligns text to the right */
+    padding-right: 20px;                    /* Adds padding on the right side */
+    padding-left: 20px;                     /* Adds padding on the left side */
+    border-radius: 7px 7px 0 0;             /* Rounds the top corners */
+}
+
+/* Styles for the calculator buttons */
+button {
+    height: 70px;                           /* Sets the height */
+    border-radius: 3px;                     /* Rounds the corners */
+    border: 1px solid darkslategray;      /* Adds a border */
+    background-color: transparent;          /* Sets the background color as transparent */
+    font-size: 3.2rem;                      /* Sets the font size */
+    color: black;                         /* Sets the text color */    
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.6)); /* Adds a gradient background */
+    text-shadow: 0 1px rgba(255, 255, 255, 0.4); /* Adds a shadow to the text */
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5), /* Adds a box shadow */
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+                inset 0 -1px 0 0 rgba(255, 255, 255, 0.5),
+                      0 1px 0 0 rgba(255, 255, 255, 0.5);                 
+}
+
+/* Styles for the calculator buttons on hover */
+button:hover {
+    background-color: #e1e1e1;            /* Sets the background color */
+}
+
+/* Styles for the operator buttons */
+.operator {
+    color: black;                         /* Sets the text color */
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.5)); /* Adds a gradient background */
+    background-color: lightgray;          /* Sets the background color */
+}
+
+/* Styles for the "all-clear" button */
+.all-clear {
+    background-color: red;                /* Sets the background color */
+    border-color: darkslategray;          /* Sets the border color */
+    color: #fff;                          /* Sets the text color */
+}
+
+/* Styles for the equal sign button */
+.equal-sign {
+    background-color: blue;               /* Sets the background color */
+    border-color: darkslategray;          /* Sets the border color */
+    color: #fff;                          /* Sets the text color */
+    height: 100%;                           /* Sets the height */
+    grid-area: 2/4/6/5;                     /* Specifies the grid area */
+}
+
+/* Styles for the equal sign button on hover */
+.equal-sign:hover {
+    background-color: darkblue;           /* Sets the background color */
+}
+
+/* Styles for the calculator buttons */
+.calculator-keys {
+    display: grid;                          /* Sets the display property to grid */
+    grid-template-columns: repeat(4, 1fr);  /* Creates a grid with 4 columns of equal width */
+    grid-gap: 20px;                         /* Sets the gap between grid items */
+    padding: 20px;                          /* Adds padding around the grid */
+}

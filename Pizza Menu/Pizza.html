@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yakitiyak's Pizza Forge</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Jason Chamberlain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/Pizza.css">
+    <script src="./js/Pizza.js" defer></script>
+</head>
+
+<body>
+    <div id="menuBG">
+        <h1 style="margin: 0 0px 0 20px;">Yakitiyak's Pizza Forge: Where Flavor Gets Fired Up!</h1>
+        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+
+        <!-- Form for selecting pizza options -->
+        <form id="frmMenu">
+            <div class="menu5 left">
+                <h3>Size:</h3>
+                <!-- Radio buttons for selecting the pizza size -->
+                <input class="size" type="radio" name="size" value='6" Pizza: Petite Pizzetta'>
+                    6" Pizza: Petite Pizzetta<br>
+                <input class="size" type="radio" name="size" value='10" Pizza: Classic Craver'>
+                    10" Pizza: Classic Craver<br>
+                <input class="size" type="radio" name="size" value='12" Pizza: Mighty Medium'>
+                    12" Pizza: Mighty Medium<br>
+                <input class="size" type="radio" name="size" value='16" Pizza: Colossal Creation'>
+                    16" Pizza: Colossal Creation<br>
+                <input class="size" type="radio" name="size" value="24&quot; Pizza: Titan's Triumph">
+                    24" Pizza: Titan's Triumph<br>
+            </div>
+
+            <div class="menu5 right">
+                <h3>Crust:</h3>
+                <!-- Radio buttons for selecting the pizza crust -->
+                <input class="crust" type="radio" name="crust" value="Classic Thin Crust">
+                    Classic Thin Crust<br>
+                <input class="crust" type="radio" name="crust" value="Traditional Hand-Tossed">
+                    Traditional Hand-Tossed<br>
+                <input class="crust" type="radio" name="crust" value="Deep Dish">
+                    Deep Dish<br>
+                <input class="crust" type="radio" name="crust" value="Rustic Whole Wheat">
+                    Rustic Whole Wheat<br>
+                <input class="crust" type="radio" name="crust" value="Gluten-Free">
+                    Gluten-Free<br>
+                <input class="no_crust" id="no_crust" type="hidden" name="crust" value="None" ><br>
+            </div>
+
+            <div class="menu8 left">
+                <h3>Sauce:</h3>
+                <!-- Radio buttons for selecting the pizza sauce -->
+                <input class="sauce" type="radio" name="sauce" value="Classic Tomato"
+                    onclick="uncheckInput('no_sauce')">Classic Tomato<br>
+                <input class="sauce" type="radio" name="sauce" value="Spicy Marinara"
+                    onclick="uncheckInput('no_sauce')">Spicy Marinara<br>
+                <input class="sauce" type="radio" name="sauce" value="Garlic Parmesan"
+                    onclick="uncheckInput('no_sauce')">Creamy Garlic Parmesan<br>
+                <input class="sauce" type="radio" name="sauce" value="Pesto"
+                    onclick="uncheckInput('no_sauce')">Pesto<br>
+                <input class="sauce" type="radio" name="sauce" value="BBQ Sauce" 
+                onclick="uncheckInput('no_sauce')">BBQ Sauce<br>
+                <input class="sauce" type="radio" name="sauce" value="White Sauce"
+                    onclick="uncheckInput('no_sauce')">White Sauce<br>
+                <input class="sauce" type="radio" name="sauce" value="Olive Oil Drizzle"
+                    onclick="uncheckInput('no_sauce')">Olive Oil Drizzle<br>
+                <input class="no_sauce" id="no_sauce" type="radio" name="sauce" value="None"
+                    onclick="uncheckInput('sauce')" checked>No Sauce<br>
+            </div>
+
+            <div class="menu8 right">
+                <h3>Cheese:</h3>
+                <!-- Checkboxes for selecting the pizza cheese -->
+                <input class="cheese" type="checkbox" name="cheese" value="Mozzarella"
+                    onclick="uncheckInput('no_cheese')">Mozzarella<br>
+                <input class="cheese" type="checkbox" name="cheese" value="Cheddar"
+                    onclick="uncheckInput('no_cheese')">Cheddar<br>
+                <input class="cheese" type="checkbox" name="cheese" value="Parmesan"
+                    onclick="uncheckInput('no_cheese')">Parmesan<br>
+                <input class="cheese" type="checkbox" name="cheese" value="Provolone"
+                    onclick="uncheckInput('no_cheese')">Provolone<br>
+                <input class="cheese" type="checkbox" name="cheese" value="Feta"
+                    onclick="uncheckInput('no_cheese')">Feta<br>
+                <input class="cheese" type="checkbox" name="cheese" value="Gorgonzola"
+                    onclick="uncheckInput('no_cheese')">Gorgonzola<br>
+                <input class="cheese" type="checkbox" name="cheese" value="Vegan Cheese"
+                    onclick="uncheckInput('no_cheese')">Vegan Cheese<br>
+                <!-- Radio button for clearing all cheese selections -->
+                <input class="no_cheese" id="no_cheese" type="radio" name="cheese" value="None"
+                    onclick="uncheckInput('cheese')" checked>No Cheese<br>
+            </div>
+
+            <div class="menu11 left">
+                <h3>Veggies:</h3>
+                <!-- Checkboxes for selecting the pizza vegetables -->
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Mushrooms"
+                    onclick="uncheckInput('no_veggies')">Mushrooms<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Bell Peppers"
+                    onclick="uncheckInput('no_veggies')">Bell Peppers<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Red Onions"
+                    onclick="uncheckInput('no_veggies')">Red Onions<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Black Olives"
+                    onclick="uncheckInput('no_veggies')">Black Olives<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Green Olives"
+                    onclick="uncheckInput('no_veggies')">Green Olives<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Tomato Slices"
+                    onclick="uncheckInput('no_veggies')">Tomato Slices<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Jalapenos"
+                    onclick="uncheckInput('no_veggies')">Jalapen&#245;s<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Spinach"
+                    onclick="uncheckInput('no_veggies')">Spinach<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Pineapple"
+                    onclick="uncheckInput('no_veggies')">Pineapple<br>
+                <input class="veggies toppings" type="checkbox" name="veggies" value="Artichoke Hearts"
+                    onclick="uncheckInput('no_veggies')">Artichoke Hearts<br>
+                <!-- Radio button for clearing all vegetable selections -->
+                <input class="no_veggies" id="no_veggies" type="radio" name="veggies" value="None"
+                    onclick="uncheckInput('veggies')" checked>No Veggies<br>
+            </div>
+
+            <div class="menu11 right">
+                <h3>Meats:</h3>
+                <!-- Checkboxes for selecting the pizza meats -->
+                <input class="meats toppings" type="checkbox" name="meats" value="Pepperoni"
+                    onclick="uncheckInput('no_meats')">Pepperoni<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Italian Sausage"
+                    onclick="uncheckInput('no_meats')">Italian Sausage<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Bacon"
+                    onclick="uncheckInput('no_meats')">Bacon<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Grilled Chicken"
+                    onclick="uncheckInput('no_meats')">Grilled Chicken<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Ham"
+                    onclick="uncheckInput('no_meats')">Ham<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Ground Beef"
+                    onclick="uncheckInput('no_meats')">Ground Beef<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Salami"
+                    onclick="uncheckInput('no_meats')">Salami<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Canadian Bacon"
+                    onclick="uncheckInput('no_meats')">Canadian Bacon<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Prosciutto"
+                    onclick="uncheckInput('no_meats')">Prosciutto<br>
+                <input class="meats toppings" type="checkbox" name="meats" value="Anchovies"
+                    onclick="uncheckInput('no_meats')">Anchovies<br>
+                <!-- Radio button for clearing all meat selections -->
+                <input class="no_meats" id="no_meats" type="radio" name="meats" value="None"
+                    onclick="uncheckInput('meats')" checked>No Meats<br>
+            </div>
+
+            <div class="menu5">
+                <h3>Herbs:</h3>
+                <!-- Checkboxes for selecting the pizza herbs -->
+                <div class="menu left">
+                    <input class="herbs" type="checkbox" name="herbs" value="Basil"
+                        onclick="uncheckInput('no_herbs')">Basil<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Oregano"
+                        onclick="uncheckInput('no_herbs')">Oregano<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Rosemary"
+                        onclick="uncheckInput('no_herbs')">Rosemary<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Thyme"
+                        onclick="uncheckInput('no_herbs')">Thyme<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Parsley"
+                        onclick="uncheckInput('no_herbs')">Parsley<br>
+                </div>
+
+                <div class="menu right">
+                    <input class="herbs" type="checkbox" name="herbs" value="Cilantro"
+                        onclick="uncheckInput('no_herbs')">Cilantro<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Sage"
+                        onclick="uncheckInput('no_herbs')">Sage<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Marjoram"
+                        onclick="uncheckInput('no_herbs')">Marjoram<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Chives"
+                        onclick="uncheckInput('no_herbs')">Chives<br>
+                    <input class="herbs" type="checkbox" name="herbs" value="Mint"
+                        onclick="uncheckInput('no_herbs')">Mint<br>
+                    <!-- Radio button for clearing all herb selections -->
+                    <input class="no_herbs" id="no_herbs" type="radio" name="herbs" value="None"
+                        onclick="uncheckInput('herbs')" checked>No Herbs<br>
+                </div>
+            </div>
+
+            <!-- Container for displaying the selected pizza options and total price -->
+            <div id="cart">                
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
